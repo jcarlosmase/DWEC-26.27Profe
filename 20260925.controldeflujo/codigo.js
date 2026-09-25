@@ -16,9 +16,33 @@ function howMany(selectObject) {
 }
 
 let btn = document.getElementById("btn");
-btn.addEventListener("click", function () {
+btn.addEventListener("click",
+    function () {
         alert(
             "Número de opciones seleccionadas: " +
             howMany(document.selectForm.musicTypes), //document.getEle,entById("musicTypes")
         );
-});
+    }
+);
+
+//Ejemplo mover options de un select a otro
+let boton2 = document.getElementById("btn2");
+boton2.addEventListener("click", 
+    function () {
+        let s1 = document.getElementById("musicTypes");
+        let s2 = document.getElementById("vacio");
+        for(let i=s1.options.length - 1;i>=0;i--){
+            if(s1.options[i].selected){
+                s2.appendChild(s1.options[i]);
+            }
+        }
+    }
+);
+
+//Tabla de multiplicar
+var num = 2;
+console.log("Tabla del " + num);
+for(let i=0;i<=10;i++){
+    //console.log(num + " x " + i + " = " + (num*i));
+    console.log(`${num} x ${i} = ${num*i}`);
+}
