@@ -20,7 +20,7 @@ var datos = [
         nombre: "PEPE",
         apellidos: "LOPEZ PEREZ",
         telefono: "666666666",
-        asignaturas = [
+        asignaturas : [
             {
                 nombre: "DWEC",
                 codigo: "1111"
@@ -39,7 +39,7 @@ var profe = {
         nombre: "LUIS",
         apellidos: "MARTINEZ GARCÍA",
         telefono: "666777777",
-        asignaturas = [
+        asignaturas : [
             {
                 nombre: "ENTORNOS",
                 codigo: "1133"
@@ -71,3 +71,26 @@ for(let i = 0;i < datos.length;i++){
 for(let i in datos){
     
 }
+
+//Interactuando con el usuario
+
+//Capturando elementos de formulario
+var texto1 = document.getElementById("valor");
+var btn1 = document.getElementById("boton");
+//Capturando eventos
+btn1.addEventListener("click", function(){
+    console.log(texto1.value);
+});
+
+/*
+Crear un formulario para dar de alta profesores introduciendo el DNI nombre apellidos y teléfono
+del mismo
+
+Más abajo añadir otro formulario para añadir asignaturas a un profesor
+indicando código de la asignatura nombre de la asignatura y DNI del profesor que la imparte
+
+Añadir un tercer y último formulario donde introduciendo el código de la asignatura
+me indique el profesor que imparte esa asignatura
+
+Posdata todos los datos que se muestran se mostrarán por consola
+*/
