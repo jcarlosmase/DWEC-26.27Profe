@@ -16,6 +16,7 @@ for (const i of arr) {
 
 var datos = [
     {
+        dni: "11111111A",
         nombre: "PEPE",
         apellidos: "LOPEZ PEREZ",
         telefono: "666666666",
@@ -34,6 +35,7 @@ var datos = [
 ];
 
 var profe = {
+        dni: "22222222B",
         nombre: "LUIS",
         apellidos: "MARTINEZ GARCÍA",
         telefono: "666777777",
