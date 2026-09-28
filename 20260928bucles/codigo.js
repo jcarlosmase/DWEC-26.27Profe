@@ -61,3 +61,11 @@ var datos = [
 //Dado un código de asignatura, mostrar el nombre y apellidos
 //del profesor que la imparte
 var codAsignatura = "1111";
+
+for(let i = 0;i < datos.length;i++){
+
+}
+
+for(let i in datos){
+    
+}
