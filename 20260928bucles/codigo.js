@@ -19,39 +19,39 @@ var datos = [
         nombre: "PEPE",
         apellidos: "LOPEZ PEREZ",
         telefono: "666666666",
-        asignaturas: {
-            nombre: "DWEC",
-            codigo: "1111"
-        }
-    },
-    {
-        nombre: "MARIA",
-        apellidos: "GARCIA GOMEZ",
-        telefono: "677777777",
-        asignaturas: {
-            nombre: "DWES",
-            codigo: "2222"
-        }
-    },
-    {
-        nombre: "JUAN",
-        apellidos: "MARTINEZ RUIZ",
-        telefono: "688888888",
-        asignaturas: {
-            nombre: "DIW",
-            codigo: "3333"
-        }
-    },
-    {
-        nombre: "ANA",
-        apellidos: "FERNANDEZ SANCHEZ",
-        telefono: "699999999",
-        asignaturas: {
-            nombre: "DAW",
-            codigo: "4444"
-        }
+        asignaturas = [
+            {
+                nombre: "DWEC",
+                codigo: "1111"
+            },
+            {
+                nombre: "DWES",
+                codigo: "1122"
+            }
+
+        ]
     }
 ];
+
+var profe = {
+        nombre: "LUIS",
+        apellidos: "MARTINEZ GARCÍA",
+        telefono: "666777777",
+        asignaturas = [
+            {
+                nombre: "ENTORNOS",
+                codigo: "1133"
+            },
+            {
+                nombre: "LENGUAJE DE MARCAS",
+                codigo: "1144"
+            }
+
+        ]
+};
+
+//Insertar al final de un array
+datos.push(profe);
 
 //EJERCICIO 1
 //Realiza un listado completo en consola de todos los
