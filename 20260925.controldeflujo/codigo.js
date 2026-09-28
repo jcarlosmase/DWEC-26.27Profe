@@ -46,3 +46,17 @@ for(let i=0;i<=10;i++){
     //console.log(num + " x " + i + " = " + (num*i));
     console.log(`${num} x ${i} = ${num*i}`);
 }
+
+//Con formulario
+
+var n = document.getElementById("numero");
+const boton = document.getElementById("btn3");
+
+boton.addEventListener("click", function() {
+  //console.log(n.value); // Muestra el valor actual del input
+    console.log("Tabla del " + n);
+    for(let i=0;i<=10;i++){
+        //console.log(num + " x " + i + " = " + (num*i));
+        console.log(`${n.value} x ${i} = ${n-value*i}`);
+    }
+});
