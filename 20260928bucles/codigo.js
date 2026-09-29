@@ -75,8 +75,8 @@ for(let i in datos){
 //Interactuando con el usuario
 
 //Capturando elementos de formulario
-var texto1 = document.getElementById("valor");
-var btn1 = document.getElementById("boton");
+var texto1 = document.getElementById("DNI");
+var btn1 = document.getElementById("boton1");
 //Capturando eventos
 btn1.addEventListener("click", function(){
     console.log(texto1.value);
