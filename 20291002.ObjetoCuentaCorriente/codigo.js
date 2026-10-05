@@ -1,6 +1,31 @@
 //Ejemplo Cuenta corriente
 //Objeto Cuenta Corriente
-var cuentaCorriente = new Cuenta2("Pepillo el de los Palotes", "111-11", 1000.00, 0.01);
+var c1 = new Cuenta2("Pepillo el de los Palotes", "111-11", 1000.00, 0.01);
+    Cuenta2.prototype.getNombre = getNombre;
+    //c1.getNombre = getNombre;
+    Cuenta2.prototype.getSaldo = getSaldo;
+    Cuenta2.prototype.getNumero = getSaldo;
+    c1.getInteres = getInteres;
+    c1.setNombre = setNombre;
+    c1.setNumero = setNumero;
+    c1.setSaldo = setSaldo;
+    c1.setInteres = setInteres;
+    c1.ingreso = ingreso;
+    c1.reintegro = reintegro;
+    c1.transferencia = transferencia;
+var c2 = new Cuenta2("Lola Flores", "222-22", 2000.00, 0.02);
+    //c2.getNombre = getNombre;
+    //c2.getSaldo = getSaldo;
+    //c2.getNumero = getSaldo;
+    c2.getInteres = getInteres;
+    c2.setNombre = setNombre;
+    c2.setNumero = setNumero;
+    c2.setSaldo = setSaldo;
+    c2.setInteres = setInteres;
+    c2.ingreso = ingreso;
+    c2.reintegro = reintegro;
+    c2.transferencia = transferencia;
+
 //Métodos
 //Contructores
 //Constructor por defecto
@@ -27,35 +52,67 @@ function Cuenta3(c){
     this.interes = c.interes;
 }
 //geters
-cuentaCorriente.getNombre = function(){
+function getNombre(){
     return this.nombre;
 }
-cuentaCorriente.getNumero = function(){
-    return this.numero;
-}
-cuentaCorriente.getSaldo = function(){
+
+function getSaldo(){
     return this.saldo;
 }
-cuentaCorriente.getInteres = function(){
+
+function getNumero(){
+    return this.numero;
+}
+
+function getInteres(){
     return this.interes;
 }
+
 //setters
-cuentaCorriente.setNombre = function(nombre){
+function setNombre(nombre){
     this.nombre = nombre;
 }
-cuentaCorriente.setNumero = function(numero){
+
+function setNumero(numero){
     this.numero = numero;
 }
-cuentaCorriente.setSaldo = function(saldo){
+
+function setSaldo(saldo){
     this.saldo = saldo;
 }
-cuentaCorriente.setInteres = function(interes){
+
+function setInteres(interes){
     this.interes = interes;
 }
+
 //Ingreso
-cuentaCorriente.ingreso = function(cantidad){
-    
+function ingreso (cantidad){
+    if(cantidad > 0){
+        this.saldo += cantidad;
+    }    
+}
+//Reintegro
+function reintegro(cantidad){
+    if(this.getSaldo() >= cantidad && cantidad > 0.00){
+        this.saldo -= cantidad;
+    }
+}
+
+//transerencia
+function transferencia(cuentaDestino, importe){
+    if(importe > 0.00 && this.getSaldo() >= importe){
+        this.reintegro(importe);
+        cuentaDestino.ingreso(importe);
+    }
 }
 
 //Ejemplos de uso
-console.log(cuentaCorriente.getNombre());
+console.log(c1.getNombre() + " Saldo: " + c1.getSaldo());
+console.log(c2.getNombre() + " Saldo: " + c2.getSaldo());
+console.log("Ingreso 500€ a Pepillo");
+c1.ingreso(500.00);
+console.log(c1.getNombre() + " Saldo: " + c1.getSaldo());
+console.log("Transfiero 200€ de Pepillo a Lola");
+c1.transferencia(c2,200.00);
+console.log(c1.getNombre() + " Saldo: " + c1.getSaldo());
+console.log(c2.getNombre() + " Saldo: " + c2.getSaldo());
