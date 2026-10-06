@@ -116,3 +116,22 @@ console.log("Transfiero 200€ de Pepillo a Lola");
 c1.transferencia(c2,200.00);
 console.log(c1.getNombre() + " Saldo: " + c1.getSaldo());
 console.log(c2.getNombre() + " Saldo: " + c2.getSaldo());
+
+//BANCO: Crea un array con 3 cuentas y muestra el nombre y saldo del que mas pasta tiene
+console.log("BANCO");
+var banco = [];
+
+banco.push(new Cuenta2("Manolo","333-33",1234.56,0.01));
+banco.push(new Cuenta2("Ana","444-44",6543.21,0.11));
+banco.push(new Cuenta2("Carmen","444-44",455.22,0.03));
+
+let saldoMayor = 0.00;
+let pos = 0;
+for(let i=0;i<banco.length;i++){
+    if(banco[i].getSaldo() > saldoMayor){
+        saldoMayor = banco[i].getSaldo();
+        pos = i;
+    }
+}
+console.log("El que mas pasta tiene del banco es: ");
+console.log(banco[pos].getNombre() + " Saldo: " + banco[pos].getSaldo());
