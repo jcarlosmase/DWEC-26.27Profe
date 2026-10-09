@@ -33,3 +33,13 @@ console.log("El valor de comida es: " + getCookie("comida"));
 setCookie("comida","churros",7);
 var valor = getCookie("comida");
 console.log("El valor de comida es: " + valor);
+
+//Otra cookie
+var deportes = ["futbol", "baloncesto", "tenis"];
+setCookie("deportes", deportes,30);
+
+var valor = getCookie("deportes");
+console.log(valor[0]);
+valor[0] = "badminton";
+setCookie("deportes", valor, 30);
+console.log(valor[0]);
