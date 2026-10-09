@@ -3,14 +3,14 @@ var tiempo = {};
 
 //Constructor
 function miTiempo(aaaa,mm,dd,h,m,s){
-    if(aaaa == mm == dd == h == m == s == 0){
-        let marca = Date();
-        this.aaaa = marca.getFullYear();
-        this.mm = marca.getMonth();
-        this.dd = marca.getDate();
-        this.h = marca.getHours();
-        this.m = marca.getMinutes();
-        this.s = marca.getSeconds();
+    if((aaaa == 0) && (mm == 0) && (dd == 0) && (h == 0) && (m == 0) && (s== 0)){
+        const hoy = new Date();
+        this.aaaa = hoy.getFullYear();
+        this.mm = hoy.getMonth();
+        this.dd = hoy.getDate();
+        this.h = hoy.getHours();
+        this.m = hoy.getMinutes();
+        this.s = hoy.getSeconds();
     }else{
         this.aaaa = aaaa;
         this.mm = mm;
