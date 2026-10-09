@@ -29,3 +29,7 @@ setCookie("comida","chocolate",7);
 
 //leemos la cookie
 console.log("El valor de comida es: " + getCookie("comida"));
+
+setCookie("comida","churros",7);
+var valor = getCookie("comida");
+console.log("El valor de comida es: " + valor);
