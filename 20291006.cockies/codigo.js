@@ -25,7 +25,7 @@ function getCookie(cname) {
 
 
 //creamos la cookie
-setCookie("comida","chocolate",7);
+setCookie("comida","manzanas",7);
 
 //leemos la cookie
 console.log("El valor de comida es: " + getCookie("comida"));
