@@ -1,3 +1,18 @@
+var equipo = {};
+
+function juega(nombre, numJugadores){
+  this.nombre = nombre;
+  this.numJugadores = numJugadores;
+
+  this.getNombre = function(){
+    return this.nombre;
+  }
+
+  this.getnumJugadores = function(){
+    return this.numJugadores;
+  }
+
+}
 
 //FUNCION PARA CREAR LA COOKIE
 function setCookie(cname, cvalue, exdays) {
@@ -39,7 +54,18 @@ var deportes = ["futbol", "baloncesto", "tenis"];
 setCookie("deportes", deportes,30);
 
 var valor = getCookie("deportes");
-console.log(valor[0]);
+console.log(valor[0]); //futbol
 valor[0] = "badminton";
 setCookie("deportes", valor, 30);
-console.log(valor[0]);
+console.log(valor[0]); //badminton
+
+//Seguimos con cookies, pero con Objects
+var olimpiadas = [];
+
+olimpiadas.push(new juega ("futbol",11));
+olimpiadas.push(new juega ("baloncesto",5));
+//Guardamos la cookie
+setCookie("olimpiadas",olimpiadas,30);
+//leemos la cookie
+var dep = getCookie("olimpiadas");
+console.log(dep[0].getNombre()); // Futbol
