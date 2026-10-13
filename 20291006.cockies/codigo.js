@@ -79,4 +79,5 @@ setCookie("olimpiadas",olimpiadas,30);
 //leemos la cookie
 var dep = getCookie("olimpiadas");
 console.log(dep);
-//console.log(dep[0].getNombre()); // Futbol
+console.log(dep[0].nombre); // Futbol
+console.log(dep[0].getNombre()); // Futbol
