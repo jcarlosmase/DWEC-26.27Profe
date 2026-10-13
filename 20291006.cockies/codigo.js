@@ -1,4 +1,4 @@
-var equipo = {};
+//var equipo = {};
 
 function juega(nombre, numJugadores){
   this.nombre = nombre;
@@ -73,8 +73,9 @@ var olimpiadas = [];
 
 olimpiadas.push(new juega ("futbol",11));
 olimpiadas.push(new juega ("baloncesto",5));
+console.log(olimpiadas[0].getNombre()); // Futbol
 //Guardamos la cookie
 setCookie("olimpiadas",olimpiadas,30);
 //leemos la cookie
 var dep = getCookie("olimpiadas");
-console.log(dep[0].getNombre); // Futbol
+console.log(dep[0].getNombre()); // Futbol
