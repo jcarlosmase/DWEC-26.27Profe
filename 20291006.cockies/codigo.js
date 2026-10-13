@@ -68,4 +68,4 @@ olimpiadas.push(new juega ("baloncesto",5));
 setCookie("olimpiadas",olimpiadas,30);
 //leemos la cookie
 var dep = getCookie("olimpiadas");
-console.log(dep[0].getNombre()); // Futbol
+console.log(dep[0].getNombre); // Futbol
