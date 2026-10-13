@@ -17,14 +17,34 @@ function juega(nombre, numJugadores){
 //FUNCION PARA CREAR LA COOKIE
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + encodeURIComponent(JSON.stringify(cvalue)) + ";" + expires + ";path=/";
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+
+  const expires = "expires=" + d.toUTCString();
+  const value = encodeURIComponent(JSON.stringify(cvalue));
+
+  document.cookie = cname + "=" + value + ";" + expires + ";path=/";
 }
-//FUNCION PARA LEER LA COOKIE
+
+// FUNCION PARA LEER LA COOKIE
 function getCookie(cname) {
-  const v = document.cookie.match('(^|;) ?' + cname + '=([^;]*)(;|$)');
-  return v ? decodeURIComponent(v[2]) : null;
+  const name = cname + "=";
+  const ca = document.cookie.split(";");
+
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i].trim();
+
+    if (c.indexOf(name) === 0) {
+      const value = decodeURIComponent(c.substring(name.length));
+
+      try {
+        return JSON.parse(value);
+      } catch (e) {
+        return value;
+      }
+    }
+  }
+
+  return null;
 }
 
 
