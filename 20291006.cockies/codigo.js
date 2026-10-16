@@ -80,4 +80,4 @@ setCookie("olimpiadas",olimpiadas,30);
 var dep = getCookie("olimpiadas");
 console.log(dep);
 console.log(dep[0].nombre); // Futbol
-console.log(dep[0].getNombre()); // Futbol
+console.log(dep[0].getNombre()); // Futbol ERROR: EL JSON NO SE GUARDAN METODOS
