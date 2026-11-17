@@ -64,13 +64,20 @@
       .contenedor { padding: 22px 18px; }
       h1 { font-size: 23px; }
     }
+    #errores{
+        font-size: small;
+        color: red;
+        margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <main class="contenedor">
     <h1>Formulario de empleado</h1>
     <p class="intro">Introduce los datos del empleado y pulsa Enviar.</p>
-
+    <div id="errores" >
+        <!-- aquí irán los mensajes de error de validación-->
+    </div>
     <form action="#" method="post">
       <div class="campo">
         <label for="dni">DNI</label>
