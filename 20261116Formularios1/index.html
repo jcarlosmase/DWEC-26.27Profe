@@ -11,10 +11,25 @@
         <label id="lnombre">Dime tu nombre</label>
         <input type="text" name="" id="campo1">
         <br />
-        <input type="radio" name="sexo" id="" value="H"> Hombre 
-        <input type="radio" name="sexo" id="" value="M"> Mujer 
+        <div id="cajaBR">
+            <input type="radio" name="sexo" id="" value="H"> Hombre 
+            <input type="radio" name="sexo" id="" value="M"> Mujer 
+        </div>
         <br /> <br />
         <button id="saluda">SALUDA</button>
+        <br />
+        <label for="">Indica otra opcion de sexo:</label>
+        <input type="text" name="" id="nuevoSexo" />
+        <br /><br />
+        <button id="BaddSexo">Añadir</button>
+        <br /> <br />
+        <label for="">Selecciona tus aficiones (Por lo menos una)</label>
+        <br />
+        <input type="checkbox" name="aficiones" id="aficiones" value="cine"> CINE
+        <input type="checkbox" name="aficiones" id="aficiones" value="teatro"> TEATRO
+        <input type="checkbox" name="aficiones" id="aficiones" value="deportes"> DEPORTES
+        <br />
+        <button id="Benviar">Enviar</button>
     </form>
 </body>
 <script src="codigo.js"></script>
